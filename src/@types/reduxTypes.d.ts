@@ -33,3 +33,9 @@ declare namespace ReduxTypes {
     fullQuantity: number;
   }
 }
+
+declare interface Store {
+  employeeReducer: {};
+  inventoryReducer: [];
+}
+declare type RootState = ReturnType<typeof rootReducer>;
