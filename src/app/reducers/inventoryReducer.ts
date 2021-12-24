@@ -1,4 +1,3 @@
-import { iteratorSymbol } from 'immer/dist/internal';
 import { fullEquipmentList } from '../../DB';
 export const inventoryReducer = (
   state: ReduxTypes.InventoryState[] = fullEquipmentList,
@@ -8,11 +7,16 @@ export const inventoryReducer = (
   switch (action.type) {
     case 'INVENTORY_CHECK':
       const currentInventory = action.payload.map(
-        ({ name, current, fullQuantity }) => ({
-          name,
-          fullQuantity,
-          missing: fullQuantity - current,
-        })
+        ({ name, current, fullQuantity }) => {
+          if (name !== action.name || !action.current) {
+            return { name, current, fullQuantity };
+          }
+          return {
+            name,
+            fullQuantity,
+            missing: fullQuantity - action.current,
+          };
+        }
       );
       return currentInventory;
     case 'ADD_PRODUCT':

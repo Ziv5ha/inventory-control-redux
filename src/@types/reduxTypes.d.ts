@@ -12,6 +12,8 @@ declare namespace ReduxTypes {
       current: number;
       fullQuantity: number;
     }[];
+    current?: number;
+    name?: string;
   }
 
   interface EmployeeState {
