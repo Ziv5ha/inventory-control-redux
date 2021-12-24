@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import { useDispatch } from 'react-redux';
+import '../styles/employee-form.css';
 
 export default function EmployeeForm() {
   const dispatch = useDispatch();
@@ -18,7 +19,7 @@ export default function EmployeeForm() {
     });
   };
   return (
-    <div>
+    <div className='e-f'>
       <label htmlFor='name-input'></label>
       <input
         ref={nameRef}

@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import { useDispatch } from 'react-redux';
+import '../styles/inventory-form.css';
 
 export default function NewItemForm() {
   const dispatch = useDispatch();
@@ -16,33 +17,36 @@ export default function NewItemForm() {
     });
   };
   return (
-    <div>
-      <label htmlFor='name'>Product Name:</label>
-      <input
-        name='name'
-        placeholder='Enter Product Name'
-        ref={nameRef}
-        type='text'
-      />
-      <br />
+    <div className='form-container'>
+      <div className='inputs'>
+        <label htmlFor='name'>Product Name:</label>
+        <input
+          name='name'
+          placeholder='Enter Product Name'
+          ref={nameRef}
+          type='text'
+        />
+      </div>
 
-      <label htmlFor='quantity'>Quantity:</label>
-      <input
-        name='quantity'
-        placeholder='Enter Quantity'
-        ref={quantityRef}
-        type='number'
-      />
-      <br />
+      <div className='inputs'>
+        <label htmlFor='quantity'>Quantity:</label>
+        <input
+          name='quantity'
+          placeholder='Enter Quantity'
+          ref={quantityRef}
+          type='number'
+        />
+      </div>
 
-      <label htmlFor='current'>Current Quantity:</label>
-      <input
-        name='current'
-        placeholder='Enter Current Quantity'
-        ref={currentRef}
-        type='number'
-      />
-      <br />
+      <div className='inputs'>
+        <label htmlFor='current'>Current Quantity:</label>
+        <input
+          name='current'
+          placeholder='Enter Current Quantity'
+          ref={currentRef}
+          type='number'
+        />
+      </div>
 
       <button onClick={clickHandler}>Submit New Product</button>
     </div>

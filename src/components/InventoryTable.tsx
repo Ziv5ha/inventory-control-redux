@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import ItemRow from './ItemRow';
+import '../styles/inventory-table.css';
 
 export default function InventoryTable() {
   const inventory = useSelector((state: RootState) => state.inventory);

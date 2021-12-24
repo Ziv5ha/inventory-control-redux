@@ -1,0 +1,35 @@
+.e-f {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  max-width: 30em;
+  min-width: 12em;
+  margin: 10em auto;
+  height: 50vh;
+  min-height: 20em;
+  max-height: 30em;
+  font-size: 1.5em;
+  align-items: center;
+}
+.e-f > input {
+  padding: 0.5em;
+  border-radius: 1em;
+  height: 1.5em;
+  margin: 1.5em 0;
+  width: 80%;
+  font-size: 1em;
+  cursor: text;
+}
+.e-f > button {
+  border-radius: 1em;
+  padding: 0.5em;
+  color: aliceblue;
+  font-size: 1.7em;
+  width: fit-content;
+  transition: all 0.3s;
+  background-color: rgb(101, 166, 168);
+  cursor: pointer;
+}
+.e-f > button:hover {
+  background-color: rgb(87, 143, 145);
+}
