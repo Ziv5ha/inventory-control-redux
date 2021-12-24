@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/inventory-control-redux/static/css/main.f5e2f8fa.css",
+    "main.js": "/inventory-control-redux/static/js/main.1fa0c1de.js",
+    "index.html": "/inventory-control-redux/index.html",
+    "main.f5e2f8fa.css.map": "/inventory-control-redux/static/css/main.f5e2f8fa.css.map",
+    "main.1fa0c1de.js.map": "/inventory-control-redux/static/js/main.1fa0c1de.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f5e2f8fa.css",
+    "static/js/main.1fa0c1de.js"
+  ]
+}
